@@ -51,6 +51,6 @@ public class Problem013Test {
         String result = solutionBruteforce(numbers);
         System.out.println("[013] brute force solution (" + result + ") in " + (nanoTime() - time) / 1000000 +
                 " milliseconds.");
-        assertEquals("", result);
+        assertEquals("5537376230", result);
     }
 }

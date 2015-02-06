@@ -14,6 +14,6 @@ public class Problem009Test {
         long result = solutionBruteforce(1000);
         System.out.println("Time for brute force solution (" + result + ") took " + (nanoTime() - time) / 1000000 +
                            " milliseconds.");
-        assertEquals(0, result);
+        assertEquals(31875000, result);
     }
 }

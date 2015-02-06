@@ -69,7 +69,7 @@ public class Util {
 				}
 			}
 
-			private Checker checker;
+			private Checker checker = getChecker();
 
 			private int[] result;
 

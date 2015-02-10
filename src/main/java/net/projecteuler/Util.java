@@ -6,9 +6,14 @@ import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 import static net.projecteuler.Util.Prime.primesUnder;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Util {
 
@@ -276,5 +281,26 @@ public class Util {
 			p += 2;
 		}
 		return divisors;
+	}
+
+	public static InputStream loadResource(Class<?> clazz, String path) {
+		ClassLoader classLoader = clazz.getClassLoader();
+		try {
+			File file = new File(classLoader.getResource(path).getFile());
+			return new FileInputStream(file);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public static ArrayList<Long> convertToNumbers(String line) {
+		ArrayList<Long> result = new ArrayList<Long>();
+		Scanner scanner = new Scanner(line);
+		while (scanner.hasNextLong()) {
+			result.add(scanner.nextLong());
+		}
+		scanner.close();
+		return result;
 	}
 }

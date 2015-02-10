@@ -2,12 +2,8 @@ package net.projecteuler;
 
 import static java.lang.System.nanoTime;
 import static net.projecteuler.Problem018.solution;
-import static net.projecteuler.Problem018.solutionBruteforce;
 import static org.junit.Assert.assertEquals;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
@@ -18,31 +14,11 @@ public class Problem018Test {
 	@Test
 	public void testSolution() throws Exception {
 		double time = nanoTime();
-		InputStream inputStream = loadResource("Problem018.input");
+		InputStream inputStream = Util.loadResource(getClass(), "Problem018.input");
 		long result = solution(inputStream);
 		System.out.println("[000] solution (" + result + ") in "
 				+ (nanoTime() - time) / 1000000 + " milliseconds.");
 		assertEquals(1074L, result);
-	}
-
-	@Test
-	public void testSolutionBruteforce() throws Exception {
-		double time = nanoTime();
-		long result = solutionBruteforce(null);
-		System.out.println("[000] brute force solution (" + result + ") in "
-				+ (nanoTime() - time) / 1000000 + " milliseconds.");
-		assertEquals(0L, result);
-	}
-
-	public InputStream loadResource(String path) {
-		ClassLoader classLoader = getClass().getClassLoader();
-		try {
-			File file = new File(classLoader.getResource(path).getFile());
-			return new FileInputStream(file);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		return null;
 	}
 
 	@Test
@@ -96,7 +72,7 @@ public class Problem018Test {
 	@Test
 	public void testSolution_mini() throws Exception {
 		// given
-		InputStream inputStream = loadResource("Problem018.mini.input");
+		InputStream inputStream = Util.loadResource(getClass(), "Problem018.mini.input");
 
 		// when
 		long result = solution(inputStream);
@@ -108,7 +84,7 @@ public class Problem018Test {
 	@Test
 	public void testSolution_67() throws Exception {
 		// given
-		InputStream inputStream = loadResource("Problem067.input");
+		InputStream inputStream = Util.loadResource(getClass(), "Problem067.input");
 
 		// when
 		long result = solution(inputStream);

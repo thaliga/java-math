@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Problem018 {
 
-	private final ArrayList<Long> sumArray = new ArrayList<>();
+	private final ArrayList<Long> sumArray = new ArrayList<Long>();
 
 	public static long solution(InputStream inputStream) {
 		Problem018 p = new Problem018();
@@ -20,7 +20,7 @@ public class Problem018 {
 	}
 
 	ArrayList<Long> processLine(String nextLine) {
-		ArrayList<Long> numbers = convertToNumbers(nextLine);
+		ArrayList<Long> numbers = Util.convertToNumbers(nextLine);
 		if (numbers.size() != sumArray.size() + 1) {
 			throw new RuntimeException();
 		}
@@ -39,21 +39,7 @@ public class Problem018 {
 		return sumArray;
 	}
 
-	private static ArrayList<Long> convertToNumbers(String line) {
-		ArrayList<Long> result = new ArrayList<Long>();
-		Scanner scanner = new Scanner(line);
-		while (scanner.hasNextLong()) {
-			result.add(scanner.nextLong());
-		}
-		scanner.close();
-		return result;
-	}
-
 	long getResult() {
 		return Collections.max(sumArray);
-	}
-
-	public static long solutionBruteforce(InputStream inputStream) {
-		return 0L;
 	}
 }

@@ -1,7 +1,7 @@
 
 package net.projecteuler;
 
-import static net.projecteuler.Util.getInt;
+import static common.Util.getInt;
 
 public class Problem008 {
 

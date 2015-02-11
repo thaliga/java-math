@@ -1,8 +1,9 @@
 
 package net.projecteuler;
 
-import net.projecteuler.Util.Prime.Checker;
-import net.projecteuler.Util.Prime.CheckerWith6n;
+import common.Util;
+import common.Util.Prime.Checker;
+import common.Util.Prime.CheckerWith6n;
 
 public class Problem010 {
 

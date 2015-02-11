@@ -6,6 +6,8 @@ import static java.lang.Math.log;
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
+import common.Util;
+
 public class Problem005 {
 
     public static long solution(int n) {

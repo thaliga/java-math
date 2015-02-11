@@ -1,8 +1,8 @@
 
 package net.projecteuler;
 
-import static net.projecteuler.Util.findFibonacciIndex;
-import static net.projecteuler.Util.sumFibonacciNumbers;
+import static common.Util.findFibonacciIndex;
+import static common.Util.sumFibonacciNumbers;
 
 public class Problem002 {
 

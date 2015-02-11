@@ -1,5 +1,7 @@
 package net.projecteuler;
 
+import common.Util;
+
 /**
  * http://code.jasonbhill.com/sage/project-euler-problem-12/
  * <script type="text/x-mathjax-config">

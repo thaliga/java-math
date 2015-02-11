@@ -8,6 +8,8 @@ import java.io.InputStream;
 
 import org.junit.Test;
 
+import common.Util;
+
 public class Problem067Test {
 
 	@Test

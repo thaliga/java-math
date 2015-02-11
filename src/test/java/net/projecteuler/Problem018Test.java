@@ -9,6 +9,8 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+import common.Util;
+
 public class Problem018Test {
 
 	@Test

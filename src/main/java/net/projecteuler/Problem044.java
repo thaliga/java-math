@@ -1,8 +1,8 @@
 
 package net.projecteuler;
 
-import static net.projecteuler.Util.isPentagonal;
-import static net.projecteuler.Util.pentagonalNumber;
+import static common.Util.isPentagonal;
+import static common.Util.pentagonalNumber;
 
 public class Problem044 {
 

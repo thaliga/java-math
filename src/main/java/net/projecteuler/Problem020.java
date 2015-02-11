@@ -3,6 +3,8 @@ package net.projecteuler;
 
 import java.math.BigInteger;
 
+import common.Util;
+
 public class Problem020 {
 
     public static long solutionBruteforce() {

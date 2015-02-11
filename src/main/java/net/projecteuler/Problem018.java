@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+import common.Util;
+
 public class Problem018 {
 
 	private final ArrayList<Long> sumArray = new ArrayList<Long>();

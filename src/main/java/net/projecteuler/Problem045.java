@@ -1,6 +1,8 @@
 
 package net.projecteuler;
 
+import common.Util;
+
 public class Problem045 {
 
     public static long solution(int t, int p, int h) {

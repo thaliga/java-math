@@ -1,10 +1,10 @@
-package net.projecteuler;
+package common;
 
+import static common.Util.Prime.primesUnder;
 import static java.lang.Math.floor;
 import static java.lang.Math.log;
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
-import static net.projecteuler.Util.Prime.primesUnder;
 
 import java.io.File;
 import java.io.FileInputStream;

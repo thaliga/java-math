@@ -1,4 +1,4 @@
-package net.projecteuler;
+package common;
 
 import static java.lang.System.nanoTime;
 import static org.junit.Assert.assertEquals;
@@ -8,6 +8,8 @@ import java.math.BigInteger;
 
 import org.hamcrest.CoreMatchers;
 import org.junit.Test;
+
+import common.Util;
 
 public class UtilTest {
 

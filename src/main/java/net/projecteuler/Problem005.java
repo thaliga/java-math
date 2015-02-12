@@ -6,6 +6,7 @@ import static java.lang.Math.log;
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
+import common.Primes;
 import common.Util;
 
 public class Problem005 {
@@ -15,7 +16,7 @@ public class Problem005 {
         int i = 0;
         boolean check = true;
         int limit = (int) sqrt(n);
-        int[] p = Util.Prime.primesUnder(n);
+        int[] p = Primes.primesUnder(n);
         int[] a = new int[p.length];
         while (i < p.length) {
             a[i] = 1;

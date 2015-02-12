@@ -1,16 +1,16 @@
 
 package net.projecteuler;
 
-import common.Util;
-import common.Util.Prime.Checker;
-import common.Util.Prime.CheckerWith6n;
+import common.PrimeCheckerWith6n;
+import common.PrimeChecker;
+import common.Primes;
 
 public class Problem007 {
 
     public static long solution(int numberOfPrime) {
         int count = 1;
         int candidate = 1;
-        Checker checker = new CheckerWith6n();
+        PrimeChecker checker = new PrimeCheckerWith6n();
         do {
             candidate = candidate + 2;
             if (checker.isPrime(candidate)) {
@@ -21,7 +21,7 @@ public class Problem007 {
     }
 
     public static long solutionBruteforce(int numberOfPrime) {
-        int[] primes = Util.Prime.primes(numberOfPrime);
+        int[] primes = Primes.primes(numberOfPrime);
         return primes[primes.length - 1];
     }
 }

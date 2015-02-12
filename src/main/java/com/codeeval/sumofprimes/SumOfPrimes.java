@@ -1,6 +1,6 @@
 package com.codeeval.sumofprimes;
 
-import common.Util;
+import common.Primes;
 
 public class SumOfPrimes {
 
@@ -8,7 +8,7 @@ public class SumOfPrimes {
 		if (numberOfPrimes < 0) {
 			throw new IllegalArgumentException();
 		}
-		int[] primes = Util.Prime.primes(numberOfPrimes);
+		int[] primes = Primes.primes(numberOfPrimes);
 		long sum = 0;
 		for (int i = 0; i < numberOfPrimes; ++i) {
 			sum += primes[i];

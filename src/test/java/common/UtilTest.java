@@ -54,7 +54,7 @@ public class UtilTest {
 
 	@Test
 	public void testPrimeChecker() throws Exception {
-		Util.Prime.Checker checker = new Util.Prime.CheckerWith6n();
+		PrimeChecker checker = new PrimeCheckerWith6n();
 		double time = nanoTime();
 
 		final int NUMBER_OF_TESTS = 8;
@@ -78,7 +78,7 @@ public class UtilTest {
 	public void testPrimesUnder() throws Exception {
 		int value = 20;
 		double time = nanoTime();
-		int[] result = Util.Prime.primesUnder(value);
+		int[] result = Primes.primesUnder(value);
 		System.out.println("Primes under " + value + ": " + (nanoTime() - time)
 				/ 1000000 + " milliseconds.");
 		assertThat(result,

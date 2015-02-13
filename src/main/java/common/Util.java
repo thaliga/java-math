@@ -150,7 +150,7 @@ public class Util {
 		return year % 400 == 0 || year % 4 == 0 && year % 100 != 0;
 	}
 
-	public static int[] convertToArray(Collection<Integer> list) {
+	public static int[] toArray(Collection<Integer> list) {
 		int size = list.size();
 		int[] result = new int[size];
 		int i = 0;

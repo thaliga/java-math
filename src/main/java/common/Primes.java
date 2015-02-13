@@ -7,7 +7,7 @@ public class Primes {
 		return new PrimeGenerator() {
 			@Override
 			protected boolean stopCondition(int number) {
-				return getPrimes().size() >= numberOfPrimes;
+				return primes.size() >= numberOfPrimes;
 			}
 		}.generate();
 	}

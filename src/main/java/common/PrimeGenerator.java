@@ -23,15 +23,11 @@ abstract class PrimeGenerator {
 		}
 	}
 
-	private PrimeChecker checker = getChecker();
+	private PrimeChecker checker = this.new DefaultChecker();
 
 	private int[] result;
 
-	private List<Integer> primes;
-
-	protected PrimeChecker createChecker() {
-		return new DefaultChecker();
-	}
+	protected List<Integer> primes;
 
 	public final int[] generate() {
 		if (result == null) {
@@ -44,21 +40,14 @@ abstract class PrimeGenerator {
 				}
 			}
 
-			result = Util.convertToArray(primes);
+			result = Util.toArray(primes);
 		}
 		return result;
 	}
 
-	final PrimeChecker getChecker() {
-		if (checker == null) {
-			checker = createChecker();
-		}
-		return checker;
-	}
-
-	final protected List<Integer> getPrimes() {
-		return primes;
-	}
-
 	abstract protected boolean stopCondition(int number);
+
+	protected void setChecker(PrimeChecker checker) {
+		this.checker = checker;
+	}
 }

@@ -22,13 +22,13 @@ public class Problem004 {
         for (int level = 0; level < maxValue; ++level) {
             int common = maxValue - level;
             boolean finished = true;
-            System.out.println("processing level " + level);
+//            System.out.println("processing level " + level);
             for (int i = 0; i <= level; ++i) {
                 int m = (common - i) * (common + i);
                 if (m > result) {
                     finished = false;
                     if (isPalindrome(m)) {
-                        System.out.println("palindrome found: " + m + " = " + (common - i) + " * " + (common + i));
+//                        System.out.println("palindrome found: " + m + " = " + (common - i) + " * " + (common + i));
                         result = m;
                     }
                 }
@@ -37,7 +37,7 @@ public class Problem004 {
                 break;
             }
             if (result > 0) {
-                System.out.println("result found at level " + level + ": " + result);
+//                System.out.println("result found at level " + level + ": " + result);
             }
         }
         return result;

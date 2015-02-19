@@ -20,7 +20,7 @@ public class Problem045 {
     public static long solutionBruteforce(int t, int p, int h) {
         for (int i = h + 1;; ++i) {
             long hexagonal = Util.hexagonalNumber(i);
-            System.out.println(i + " -> " + hexagonal);
+//            System.out.println(i + " -> " + hexagonal);
             for (int j = p + 1;; ++j) {
                 long pentagonal = Util.pentagonalNumber(j);
                 if (pentagonal > hexagonal) {
@@ -28,10 +28,10 @@ public class Problem045 {
                 } else if (pentagonal < hexagonal) {
                     continue;
                 }
-                System.out.println(hexagonal + " -- " + pentagonal);
+//                System.out.println(hexagonal + " -- " + pentagonal);
                 for (int k = t + 1;; ++k) {
                     long triangle = Util.triangleNumber(k);
-                    System.out.println(hexagonal + " -- " + pentagonal + " -- " + triangle);
+//                    System.out.println(hexagonal + " -- " + pentagonal + " -- " + triangle);
                     if (triangle > pentagonal) {
                         break;
                     } else if (triangle < pentagonal) {

@@ -1,9 +1,9 @@
 
 package net.projecteuler;
 
+import static common.TestUtil.checkResult;
 import static java.lang.System.nanoTime;
 import static net.projecteuler.Problem011.solutionBruteforce;
-import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -34,10 +34,13 @@ public class Problem011Test {
 
     @Test
     public void testSolutionBruteforce() throws Exception {
+    	// given
         double time = nanoTime();
+        
+        // when
         long result = solutionBruteforce(matrix);
-        System.out.println("[011] brute force solution (" + result + ") in " + (nanoTime() - time) / 1000000 +
-                " milliseconds.");
-        assertEquals(70600674L, result);
+
+        // then
+		checkResult("010", "brute force ", 70600674L, result, time);
     }
 }

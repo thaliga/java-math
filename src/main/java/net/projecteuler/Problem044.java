@@ -23,15 +23,15 @@ public class Problem044 {
                 if (!isPentagonal(diff)) {
                     continue;
                 }
-                System.out.println("Found pentagonal diff = " + diff + " for j = " + j + " and k = " + k);
+//                System.out.println("Found pentagonal diff = " + diff + " for j = " + j + " and k = " + k);
 
                 if (!isPentagonal(pk + pj)) {
                     continue;
                 }
-                System.out.println("Found pentagonal sum = " + (pk + pj) + " for j = " + j + " and k = " + k);
+//                System.out.println("Found pentagonal sum = " + (pk + pj) + " for j = " + j + " and k = " + k);
 
                 min = diff;
-                System.out.println("Found min = " + min + " for j = " + j + " and k = " + k);
+//                System.out.println("Found min = " + min + " for j = " + j + " and k = " + k);
             }
         }
         return min == Long.MAX_VALUE ? 0 : min;

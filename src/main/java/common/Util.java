@@ -111,7 +111,7 @@ public class Util {
 			n = n / 2;
 		}
 		divisors = divisors * (count + 1);
-		
+
 		int p = 3;
 		while (n != 1) {
 			count = 0;

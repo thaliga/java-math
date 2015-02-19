@@ -1,10 +1,10 @@
 
 package net.projecteuler;
 
+import static common.TestUtil.checkResult;
 import static java.lang.System.nanoTime;
 import static net.projecteuler.Problem012.solution;
 import static net.projecteuler.Problem012.solutionBruteforce;
-import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -12,18 +12,25 @@ public class Problem012Test {
 
     @Test
     public void testSolution() throws Exception {
-        double time = nanoTime();
+        // given
+    	double time = nanoTime();
+
+        // when
         long result = solution();
-        System.out.println("[012] solution (" + result + ") in " + (nanoTime() - time) / 1000000 + " milliseconds.");
-        assertEquals(76576500L, result);
+
+        // then
+		checkResult("012", 76576500L, result, time);
     }
 
     @Test
     public void testSolutionBruteforce() throws Exception {
+        // given
         double time = nanoTime();
+        
+        // when
         long result = solutionBruteforce();
-        System.out.println("[012] brute force solution (" + result + ") in " + (nanoTime() - time) / 1000000 +
-                " milliseconds.");
-        assertEquals(0L, result);
+
+        // then
+		checkResult("012", "brute force ", 0L, result, time);
     }
 }

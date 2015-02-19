@@ -1,8 +1,8 @@
 package net.projecteuler;
 
+import static common.TestUtil.checkResult;
 import static java.lang.System.nanoTime;
 import static net.projecteuler.Problem067.solution;
-import static org.junit.Assert.assertEquals;
 
 import java.io.InputStream;
 
@@ -14,11 +14,15 @@ public class Problem067Test {
 
 	@Test
 	public void testSolution() throws Exception {
+		// given
 		double time = nanoTime();
-		InputStream inputStream = Util.loadResource(getClass(), "Problem067.input");
+		InputStream inputStream = Util.loadResource(getClass(),
+				"Problem067.input");
+
+		// when
 		long result = solution(inputStream);
-		System.out.println("[000] solution (" + result + ") in "
-				+ (nanoTime() - time) / 1000000 + " milliseconds.");
-		assertEquals(7273L, result);
+
+		// then
+		checkResult("067", 7273L, result, time);
 	}
 }

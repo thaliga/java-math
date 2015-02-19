@@ -1,5 +1,7 @@
 package com.codeeval.sumofprimes;
 
+import static common.TestUtil.checkResult;
+import static java.lang.System.nanoTime;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
@@ -92,12 +94,13 @@ public class SumOfPrimesTest {
 	@Test
 	public void calculate_ThousandPrimes_Returns3682913() throws Exception {
 		// given
+        double time = nanoTime();
 		int numberOfPrimes = 1000; 
 		
 		// when
 		long result = sop.calculate(numberOfPrimes);
 		
 		// then
-		assertEquals(3682913L, result);
+        checkResult("SumOfPrimes", 3682913L, result, time);
 	}
 }
